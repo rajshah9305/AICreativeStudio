@@ -25,8 +25,3 @@ export interface RequestWithId extends Request {
   };
 }
 
-export interface HealthStatus {
-  status: 'ok' | 'error';
-  timestamp: string;
-  metrics?: any;
-}

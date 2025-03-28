@@ -9,14 +9,11 @@
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
     "build": "npm run build --workspaces",
-    "start": "npm run start --workspaces"
+    "start": "npm run start --workspaces",
+    "test": "npm run test --workspaces",
+    "clean": "rm -rf node_modules && npm run clean --workspaces"
   },
   "devDependencies": {
     "concurrently": "^8.0.0"
-  },
-  "dependencies": {
-    "prom-client": "^14.2.0",
-    "uuid": "^9.0.0",
-    "winston-daily-rotate-file": "^4.7.1"
   }
 }

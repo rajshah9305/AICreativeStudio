@@ -1,25 +1,12 @@
+// services/api.ts
 import axios from 'axios';
-import { toast } from 'react-toastify';
 import { GenerationParams } from '../types';
+import { AppError } from '../utils/errorHandler';
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api',
-  timeout: 30000,
-  headers: {
-    'Content-Type': 'application/json'
-  }
+  timeout: 30000,  // 30 second timeout
 });
-
-api.interceptors.response.use(
-  response => response,
-  error => {
-    const message = error.response?.data?.message || 'An error occurred';
-    toast.error(message);
-    return Promise.reject(error);
-  }
-);
-
-import { AppError } from '../utils/errorHandler';
 
 const handleApiError = (error: unknown, message: string) => {
   if (axios.isAxiosError(error)) {
