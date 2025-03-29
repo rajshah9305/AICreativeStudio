@@ -5,7 +5,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
+  },
+  "jest": {
+    "testMatch": ["**/tests/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"]
   },
   "dependencies": {
     "next": "^13.0.0",
