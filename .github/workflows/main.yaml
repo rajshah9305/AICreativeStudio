@@ -20,6 +20,8 @@ jobs:
         run: |
           cd frontend
           npm install
+          npm install --save-dev eslint
+          npm install react-toastify
           cd ../backend
           npm install
           
