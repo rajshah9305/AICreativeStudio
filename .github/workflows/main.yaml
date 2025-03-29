@@ -1,4 +1,3 @@
-# .github/workflows/main.yml
 name: Deploy AI Creative Studio
 
 on:
